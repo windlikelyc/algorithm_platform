@@ -11,5 +11,3 @@
 最好有单元测试，方便后人使用  
 ~~欢迎fork！~~  
 有问题联系windlikelyc@gmail.com  
-#### 目录
-求两个数的和，用到了Map[TwoSum](./tree/master/src/main/java/problems/easy/TwoSum.java)
