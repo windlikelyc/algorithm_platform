@@ -21,7 +21,7 @@ public class TwoSumTest {
                 assertTrue(ArraysUtil.equals((int[])ans,new int[]{1,2}));
             };
         };
-        classUtil.runAllMethod(new Object[]{new int[]{3,2,4},6});
+        classUtil.runAllMethod(TwoSum.class,new Object[]{new int[]{3,2,4},6});
     }
 
 

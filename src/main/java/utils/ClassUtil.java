@@ -85,10 +85,10 @@ public abstract class ClassUtil {
 
     // 注意，这个必须要只有一个方法才行
     // para 方法的实际入参
-    public void runAllMethod(Object... para) {
+    public void runAllMethod(Class target,Object... para) {
         try {
             System.out.println("获取所有子类和实现类：");
-            for (Class<?> c : getAllAssignedClass(TwoSum.class)) {
+            for (Class<?> c : getAllAssignedClass(target)) {
                 System.out.println(c.getName());
                 Method[] methods = c.getDeclaredMethods();
                 Object ans = methods[0].invoke(c.newInstance(), para);
