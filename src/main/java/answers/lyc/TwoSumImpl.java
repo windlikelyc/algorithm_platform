@@ -2,7 +2,7 @@ package answers.lyc;
 
 import problems.easy.TwoSum;
 
-public class TwoSum1 implements TwoSum{
+public class TwoSumImpl implements TwoSum{
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0 ; i < nums.length ; i++) {
             for(int j = 0 ; j < nums.length ; j++) {

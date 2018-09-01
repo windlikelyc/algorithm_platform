@@ -1,30 +1,27 @@
-import answers.lyc.TwoSum1;
-import answers.veteran.TwoSum2;
+import answers.veteran.TwoSumImpl;
 import org.junit.Test;
 import problems.easy.TwoSum;
 import utils.ArraysUtil;
+import utils.ClassUtil;
 
-import java.util.Arrays;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.lang.reflect.Method;
 
 import static org.junit.Assert.assertTrue;
+import static utils.ClassUtil.getAllAssignedClass;
 
 public class TwoSumTest {
-    @Test
-    public void test1(){
-        TwoSum ans = new TwoSum1();
-        assertTrue(ArraysUtil.equals(ans.twoSum(new int[]{2,7,11,15},9),new int[]{0,1}));
-    }
+
 
     @Test
-    public void test2(){
-        TwoSum ans = new TwoSum1();
-        assertTrue(ArraysUtil.equals(ans.twoSum(new int[]{3,2,4},6),new int[]{1,2}));
-    }
-
-    @Test
-    public void test3(){
-        TwoSum ans = new TwoSum2();
-        assertTrue(ArraysUtil.equals(ans.twoSum(new int[]{3,2,4},6),new int[]{1,2}));
+    public void testAll() throws IOException, ClassNotFoundException {
+        ClassUtil classUtil = new ClassUtil() {
+            public void check(Object ans) {
+                assertTrue(ArraysUtil.equals((int[])ans,new int[]{1,2}));
+            };
+        };
+        classUtil.runAllMethod(new Object[]{new int[]{3,2,4},6});
     }
 
 
